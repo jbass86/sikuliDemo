@@ -7,9 +7,17 @@ import sikuliDemo.list.LinkedList;
 
 import static sikuliDemo.utilities.StringUtils.join;
 import static sikuliDemo.utilities.StringUtils.split;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import static sikuliDemo.app.MessageUtils.getMessage;
 
 import org.apache.commons.text.WordUtils;
+import org.sikuli.script.Location;
+import org.sikuli.script.Mouse;
 
 public class App {
     public static void main(String[] args) {
@@ -17,5 +25,19 @@ public class App {
         tokens = split(getMessage());
         String result = join(tokens);
         System.out.println(WordUtils.capitalize(result));
+
+        JFrame frame = new JFrame();
+        JButton button = new JButton("I do nothing");
+        frame.add(button);
+        frame.setPreferredSize(new Dimension(200, 200));
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Mouse.move(new Location(233, 150));
+        Mouse.move(new Location(600, 535));
+        Mouse.move(new Location(50, 120));
+
+
     }
 }
