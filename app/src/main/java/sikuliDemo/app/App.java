@@ -37,7 +37,5 @@ public class App {
         Mouse.move(new Location(233, 150));
         Mouse.move(new Location(600, 535));
         Mouse.move(new Location(50, 120));
-
-
     }
 }
