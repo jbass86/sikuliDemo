@@ -11,6 +11,7 @@ dependencies {
     implementation 'com.sikulix:sikulixapi:2.0.5'
     implementation 'net.sourceforge.tess4j:tess4j:5.2.1'
     implementation project(':utilities')
+    implementation 'org.python:jython-slim:2.7.2'
 }
 
 application {

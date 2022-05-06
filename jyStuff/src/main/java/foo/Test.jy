@@ -1,0 +1,4 @@
+from jarray import array
+
+a = array([ 1 ], 'i')
+print a

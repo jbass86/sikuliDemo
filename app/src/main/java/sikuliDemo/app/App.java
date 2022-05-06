@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import static sikuliDemo.app.MessageUtils.getMessage;
 
 import org.apache.commons.text.WordUtils;
+import org.python.util.PythonInterpreter;
 import org.sikuli.script.Location;
 import org.sikuli.script.Mouse;
 
@@ -37,5 +38,15 @@ public class App {
         Mouse.move(new Location(233, 150));
         Mouse.move(new Location(600, 535));
         Mouse.move(new Location(50, 120));
+
+        System.out.println("BASS");
+        PythonInterpreter interp = new PythonInterpreter();
+        interp.exec("import sys");
+        interp.exec("print sys");
+        interp.exec("print 'running python stuff'");
+        interp.close();
+
+        System.out.println("App is done....");
+       
     }
 }
